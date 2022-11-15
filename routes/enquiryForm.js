@@ -6,6 +6,7 @@ const enquiryFormController = require('../controllers/enquiryForm')
 
 router.post('/',enquiryFormController.store)
 router.get('/',enquiryFormController.fetch)
+router.delete('/',enquiryFormController.deleteData)
 
 module.exports = router
 

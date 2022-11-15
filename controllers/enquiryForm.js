@@ -39,6 +39,20 @@ const fetch = (req,res) => {
 
 }
 
+const deleteData = (req,res) => {
+    enquiryForm.deleteMany()
+        .then((response) => {
+            res.json({
+                response
+            })
+        })
+        .catch(() => {
+            res.json({
+                message : "An Error Occured"
+            })
+        })
+}
+
 module.exports = {
-    store, fetch
+    store, fetch, deleteData
 }
